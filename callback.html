@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ReelForge-es · TikTok callback</title><link rel="icon" href="icon.png"><link rel="stylesheet" href="style.css"></head><body><header><img src="icon.png" alt=""><b>ReelForge-es</b></header><main>
+<h1>Authorization received</h1>
+<div class="card"><p id="msg">Forwarding to the local dashboard at <code>http://localhost:8080/callback/</code>…</p>
+<p>Authorization code (backup — paste it into the terminal if the redirect does not work):</p><p><code id="code">—</code></p><p id="err" style="color:#FF3B5C"></p></div>
+<p style="color:var(--mute);font-size:14px">This page only runs in your browser: the code is passed to <code>localhost</code> and is never sent to this website's server.</p>
+<script>
+(function(){var q=new URLSearchParams(window.location.search);
+var c=q.get("code"),e=q.get("error_description")||q.get("error");
+if(c){document.getElementById("code").textContent=c;}
+if(e){document.getElementById("err").textContent="TikTok returned: "+e;}
+if(window.location.search){setTimeout(function(){window.location.href="http://localhost:8080/callback/"+window.location.search;},900);}
+else{document.getElementById("msg").textContent="Nothing to forward (no parameters in the URL).";}})();
+</script></main></body></html>

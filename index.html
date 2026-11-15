@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ReelForge-es</title><link rel="icon" href="icon.png"><link rel="stylesheet" href="style.css"></head><body><header><img src="icon.png" alt="ReelForge-es logo"><b>ReelForge-es</b><nav><a href="./">Home</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></nav></header><main><h1>ReelForge-es</h1>
+<p>ReelForge-es is a small, self-hosted editorial and analytics tool used by one creator to manage the short videos of the education channel <strong>Por la Tangente</strong> (<a href="https://www.tiktok.com/@porlatangente.es">@porlatangente.es</a>): math and physics explained in 20-second animations, in Spanish.</p>
+<div class="card"><h2 style="margin-top:0">Connect your account</h2>
+<p>The app runs on the owner's own computer. The button below opens the local dashboard at <code>http://localhost:8080</code> and starts the standard TikTok Login Kit (OAuth 2.0) authorization. You will be asked to approve the permissions listed below on TikTok's own page.</p>
+<p><a class="btn" href="http://localhost:8080/login">Connect with TikTok</a></p>
+<p style="color:var(--mute);font-size:14px">If nothing opens, the local dashboard is not running on this computer. After you approve, TikTok redirects to <a href="callback.html">callback.html</a>, which hands the temporary authorization code to the local dashboard.</p></div>
+<h2>What the dashboard does</h2>
+<ul>
+<li><strong>Profile and stats</strong> — shows the connected account's profile and public counts.</li>
+<li><strong>Video list</strong> — lists the account's own videos with their public metrics, to compare what works.</li>
+<li><strong>Posting</strong> — the owner selects a rendered MP4, writes the title, picks a privacy level (only the options TikTok allows for that account) and sends it with the Content Posting API. Nothing is posted without that explicit action.</li>
+</ul>
+<h2>Permissions requested (TikTok scopes)</h2>
+<table><tr><th>Scope</th><th>Used for</th></tr>
+<tr><td><code>user.info.basic</code></td><td>Display name and avatar of the connected account.</td></tr>
+<tr><td><code>user.info.stats</code></td><td>Follower, like and video counts shown in the dashboard.</td></tr>
+<tr><td><code>video.list</code></td><td>List the account's own public videos and their view/like/comment/share counts.</td></tr>
+<tr><td><code>video.upload</code></td><td>Send a video to the creator's TikTok inbox as a draft.</td></tr>
+<tr><td><code>video.publish</code></td><td>Publish a video the creator has just reviewed and approved.</td></tr></table>
+<p>Details: <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>.</p>
+</main><footer>© 2026 ReelForge-es · operated by the owner of the <a href="https://www.tiktok.com/@porlatangente.es">@porlatangente.es</a> accounts · Contact: <a href="https://github.com/adri-devs/reelforge-legal/issues">GitHub issues</a></footer></body></html>
